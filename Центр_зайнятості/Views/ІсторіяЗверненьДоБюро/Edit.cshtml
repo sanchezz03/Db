@@ -1,0 +1,64 @@
+﻿@model Центр_зайнятості.Models.ІсторіяЗверненьДоБюро
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ІсторіяЗверненьДоБюро</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="КодЗапису" />
+            <div class="form-group">
+                <label asp-for="КодПрацівника" class="control-label"></label>
+                <select asp-for="КодПрацівника" class="form-control" asp-items="ViewBag.КодПрацівника"></select>
+                <span asp-validation-for="КодПрацівника" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ДатаЗвернення" class="control-label"></label>
+                <input asp-for="ДатаЗвернення" class="form-control" />
+                <span asp-validation-for="ДатаЗвернення" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Перекваліфікація" class="control-label"></label>
+                <input asp-for="Перекваліфікація" class="form-control" />
+                <span asp-validation-for="Перекваліфікація" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ДатаПерекваліфікації" class="control-label"></label>
+                <input asp-for="ДатаПерекваліфікації" class="form-control" />
+                <span asp-validation-for="ДатаПерекваліфікації" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ДатаВлаштування" class="control-label"></label>
+                <input asp-for="ДатаВлаштування" class="form-control" />
+                <span asp-validation-for="ДатаВлаштування" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ВідмоваВідЗапропонованихВакансій" class="control-label"></label>
+                <input asp-for="ВідмоваВідЗапропонованихВакансій" class="form-control" />
+                <span asp-validation-for="ВідмоваВідЗапропонованихВакансій" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="КількістьВідмов" class="control-label"></label>
+                <input asp-for="КількістьВідмов" class="form-control" />
+                <span asp-validation-for="КількістьВідмов" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

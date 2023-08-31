@@ -1,0 +1,87 @@
+﻿@model Центр_зайнятості.Models.Працівник
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Працівник</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Імя)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Імя)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Прізвище)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Прізвище)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ПоБатькові)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ПоБатькові)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ДатаНародження)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ДатаНародження)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ДосвідРоботиРоки)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ДосвідРоботиРоки)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Навички)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Навички)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Освіта)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Освіта)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.АдресаПроживання)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.АдресаПроживання)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.СеріяПаспорта)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.СеріяПаспорта)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.НомерПаспорта)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.НомерПаспорта)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ДодатковіВміння)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ДодатковіВміння)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="КодПрацівника" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Центр_зайнятості.Models.GetUnfilledVacancies>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>GetUnfilledVacancies</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Підприємство
+            </th>
+            <th>
+                Вакансія
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Підприємство)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Вакансія)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

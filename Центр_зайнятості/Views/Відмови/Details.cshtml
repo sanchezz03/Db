@@ -1,0 +1,30 @@
+﻿@model Центр_зайнятості.Models.Відмови
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Відмови</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ДатаВідмови)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ДатаВідмови)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.КодКлієнтаNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.КодКлієнтаNavigation.КодКлієнта)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.КодВідмови">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

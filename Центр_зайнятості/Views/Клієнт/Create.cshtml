@@ -1,0 +1,62 @@
+﻿@model Центр_зайнятості.Models.Клієнт
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Клієнт</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="КодПідприємства" class="control-label"></label>
+                <select asp-for="КодПідприємства" class ="form-control" asp-items="ViewBag.КодПідприємства"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Імя" class="control-label"></label>
+                <input asp-for="Імя" class="form-control" />
+                <span asp-validation-for="Імя" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ФормаВласності" class="control-label"></label>
+                <input asp-for="ФормаВласності" class="form-control" />
+                <span asp-validation-for="ФормаВласності" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="НомерТелефону" class="control-label"></label>
+                <input asp-for="НомерТелефону" class="form-control" />
+                <span asp-validation-for="НомерТелефону" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Адреса" class="control-label"></label>
+                <input asp-for="Адреса" class="form-control" />
+                <span asp-validation-for="Адреса" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ДатаЗнайденоїРоботи" class="control-label"></label>
+                <input asp-for="ДатаЗнайденоїРоботи" class="form-control" />
+                <span asp-validation-for="ДатаЗнайденоїРоботи" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

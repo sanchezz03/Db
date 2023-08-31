@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Центр_зайнятості.Models.GetClientEmploymentPercentage>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Employment Statistics</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Total Clients Before
+            </th>
+            <th>
+                Total Clients After
+            </th>
+            <th>
+                Employment Percentage After
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalClientsBefore)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalClientsAfter)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmploymentPercentageAfter)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

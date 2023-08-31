@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Центр_зайнятості.Models.Вакансія>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.КодПідприємства)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Вік)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Стать)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Освіта)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.СоцПакет)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ТривалістьРобочогоДняГодини)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.НазваВакансії)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ДатаСтворення)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ДосвідРоботиРоки)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.КодПідприємства)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Вік)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Стать)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Освіта)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.СоцПакет)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ТривалістьРобочогоДняГодини)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.НазваВакансії)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаСтворення)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДосвідРоботиРоки)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.КодВакансії">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.КодВакансії">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.КодВакансії">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

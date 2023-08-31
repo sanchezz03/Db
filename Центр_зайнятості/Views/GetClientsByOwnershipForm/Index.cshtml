@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Центр_зайнятості.Models.GetClientsByOwnershipForm>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>GetClientsByOwnershipForm</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Назва)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Назва)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,72 @@
+﻿@model Центр_зайнятості.Models.Вакансія
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Вакансія</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.КодПідприємства)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.КодПідприємства)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Вік)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Вік)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Стать)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Стать)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Освіта)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Освіта)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.СоцПакет)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.СоцПакет)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ТривалістьРобочогоДняГодини)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ТривалістьРобочогоДняГодини)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.НазваВакансії)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.НазваВакансії)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ДатаСтворення)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ДатаСтворення)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ДосвідРоботиРоки)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ДосвідРоботиРоки)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.КодВакансії">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Центр_зайнятості.Models.GetClientAndVacancyCounts>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>GetClientAndVacancyCounts</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Кількість клієнтів
+            </th>
+            <th>
+                Кількість вакансій
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Кількість_клієнтів)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Кількість_вакансій)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

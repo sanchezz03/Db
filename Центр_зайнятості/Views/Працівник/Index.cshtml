@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Центр_зайнятості.Models.Працівник>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Імя)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Прізвище)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ПоБатькові)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ДатаНародження)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ДосвідРоботиРоки)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Навички)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Освіта)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.АдресаПроживання)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.СеріяПаспорта)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.НомерПаспорта)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ДодатковіВміння)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Імя)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Прізвище)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ПоБатькові)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаНародження)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДосвідРоботиРоки)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Навички)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Освіта)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.АдресаПроживання)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.СеріяПаспорта)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.НомерПаспорта)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДодатковіВміння)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.КодПрацівника">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.КодПрацівника">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.КодПрацівника">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

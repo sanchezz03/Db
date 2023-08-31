@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Центр_зайнятості.Models.GetClientsNotQualifiedAndRejected>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>GetClientsNotQualifiedAndRejected</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Імя)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Форма_власності)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Дата_відмови)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Імя)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Форма_власності)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Дата_відмови)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

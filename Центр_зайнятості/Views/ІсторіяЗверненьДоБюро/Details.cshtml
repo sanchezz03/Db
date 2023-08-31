@@ -1,0 +1,60 @@
+﻿@model Центр_зайнятості.Models.ІсторіяЗверненьДоБюро
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ІсторіяЗверненьДоБюро</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ДатаЗвернення)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ДатаЗвернення)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Перекваліфікація)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Перекваліфікація)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ДатаПерекваліфікації)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ДатаПерекваліфікації)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ДатаВлаштування)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ДатаВлаштування)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ВідмоваВідЗапропонованихВакансій)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ВідмоваВідЗапропонованихВакансій)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.КількістьВідмов)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.КількістьВідмов)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.КодПрацівникаNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.КодПрацівникаNavigation.КодПрацівника)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.КодЗапису">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

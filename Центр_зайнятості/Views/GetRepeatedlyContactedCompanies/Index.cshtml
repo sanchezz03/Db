@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Центр_зайнятості.Models.GetRepeatedlyContactedCompanies>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>GetRepeatedlyContactedCompanies</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Назва_підприємства)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Назва_підприємства)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

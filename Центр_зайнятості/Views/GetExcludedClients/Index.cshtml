@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Центр_зайнятості.Models.GetExcludedClients>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>GetExcludedClients</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Код клієнта
+            </th>
+            <th>
+                Ім'я
+            </th>
+            <th>
+                Форма власності
+            </th>
+            <th>
+                Номер телефону
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Адреса
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Код_клієнта)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Імя)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Форма_власності)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Номер_телефону)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Адреса)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

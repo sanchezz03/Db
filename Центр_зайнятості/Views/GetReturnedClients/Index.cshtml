@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Центр_зайнятості.Models.GetReturnedClients>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>GetReturnedClients</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Імя)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Форма_власності)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Номер_телефону)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Адреса)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Імя)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Форма_власності)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Номер_телефону)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Адреса)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
